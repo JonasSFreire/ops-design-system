@@ -1,0 +1,3 @@
+/* Ops Design System — single import for vibecoded apps. */
+@import "./tokens.css";
+@import "./components.css";

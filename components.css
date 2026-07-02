@@ -1,0 +1,276 @@
+/* ─────────────────────────────────────────────────────────────────────────
+   Ops Design System — components
+   A deliberately tiny, framework-agnostic component kit built only on the
+   tokens. Class prefix: `ods-`. Import after tokens.css (or use index.css).
+   ───────────────────────────────────────────────────────────────────────── */
+
+/* ── Base ──────────────────────────────────────────────────────────────── */
+
+.ods-app {
+  background: var(--ods-color-bg);
+  color: var(--ods-color-text);
+  font-family: var(--ods-font-sans);
+  min-height: 100vh;
+}
+
+/* ── Card ──────────────────────────────────────────────────────────────── */
+
+.ods-card {
+  background: var(--ods-color-surface);
+  border: 1px solid var(--ods-color-border);
+  border-radius: var(--ods-radius-lg);
+  box-shadow: var(--ods-shadow-card);
+  padding: 24px;
+}
+
+/* ── Button ────────────────────────────────────────────────────────────── */
+
+.ods-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: var(--ods-touch-target);
+  padding: 12px 20px;
+  border: none;
+  border-radius: var(--ods-radius-md);
+  background: var(--ods-color-brand);
+  color: var(--ods-color-on-emphasis);
+  font-family: var(--ods-font-sans);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s;
+  touch-action: manipulation;
+}
+
+.ods-btn:hover {
+  background: var(--ods-color-brand-strong);
+}
+
+.ods-btn:disabled {
+  background: var(--ods-color-surface-alt);
+  color: var(--ods-color-text-muted);
+  border: 1px solid var(--ods-color-border);
+  cursor: not-allowed;
+}
+
+.ods-btn--success {
+  background: var(--ods-color-success);
+}
+.ods-btn--success:hover {
+  background: var(--ods-color-success-strong);
+}
+
+.ods-btn--danger {
+  background: var(--ods-color-danger);
+}
+.ods-btn--danger:hover {
+  background: var(--ods-color-danger-strong);
+}
+
+.ods-btn--ghost {
+  background: var(--ods-color-surface-alt);
+  color: var(--ods-color-text-secondary);
+  border: 1px solid var(--ods-color-border);
+}
+.ods-btn--ghost:hover {
+  background: var(--ods-color-border);
+}
+
+.ods-btn--big {
+  min-height: var(--ods-control-height);
+  padding: 16px 28px;
+  font-size: 18px;
+}
+
+/* ── Badge (pill) ──────────────────────────────────────────────────────── */
+
+.ods-badge {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: var(--ods-radius-full);
+  border: 1.5px solid var(--ods-color-border);
+  background: var(--ods-color-surface-alt);
+  color: var(--ods-color-text-secondary);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.ods-badge--success {
+  background: var(--ods-color-success-soft);
+  border-color: var(--ods-color-success-border);
+  color: var(--ods-color-success);
+}
+
+.ods-badge--danger {
+  background: var(--ods-color-danger-soft);
+  border-color: var(--ods-color-danger-border);
+  color: var(--ods-color-danger);
+}
+
+.ods-badge--violet {
+  background: var(--ods-color-accent-violet-soft);
+  border-color: var(--ods-color-accent-violet-border);
+  color: var(--ods-color-accent-violet);
+}
+
+.ods-badge--cyan {
+  background: var(--ods-color-accent-cyan-soft);
+  border-color: var(--ods-color-accent-cyan-border);
+  color: var(--ods-color-accent-cyan);
+}
+
+.ods-badge--orange {
+  background: var(--ods-color-accent-orange-soft);
+  border-color: var(--ods-color-accent-orange-border);
+  color: var(--ods-color-accent-orange);
+}
+
+/* ── Input ─────────────────────────────────────────────────────────────── */
+
+.ods-input {
+  width: 100%;
+  min-height: var(--ods-control-height);
+  padding: 16px;
+  border: 1.5px solid var(--ods-color-border);
+  border-radius: var(--ods-radius-md);
+  background: var(--ods-color-surface);
+  color: var(--ods-color-text);
+  font-family: var(--ods-font-sans);
+  font-size: 18px;
+  outline: none;
+  box-sizing: border-box;
+  touch-action: manipulation;
+}
+
+.ods-input:focus {
+  border-color: var(--ods-color-brand);
+}
+
+.ods-input--error {
+  border-color: var(--ods-color-danger);
+}
+
+.ods-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ods-color-text-secondary);
+}
+
+/* ── Banner (full-width notification) ──────────────────────────────────── */
+
+.ods-banner {
+  padding: 20px 32px;
+  background: var(--ods-color-info);
+  color: var(--ods-color-on-emphasis);
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
+.ods-banner--success {
+  background: var(--ods-color-success);
+}
+.ods-banner--warning {
+  background: var(--ods-color-warning);
+}
+.ods-banner--danger {
+  background: var(--ods-color-danger);
+}
+
+/* ── Tabs ──────────────────────────────────────────────────────────────── */
+
+.ods-tabs {
+  display: flex;
+  gap: 6px;
+  padding: 12px 20px;
+  background: var(--ods-color-surface);
+  border-bottom: 1px solid var(--ods-color-border);
+}
+
+.ods-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-height: var(--ods-touch-target);
+  padding: 12px 24px;
+  border: none;
+  border-radius: var(--ods-radius-sm);
+  background: transparent;
+  color: var(--ods-color-text-secondary);
+  font-family: var(--ods-font-sans);
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    color 0.15s;
+  touch-action: manipulation;
+}
+
+.ods-tab:hover {
+  background: var(--ods-color-surface-alt);
+}
+
+.ods-tab--active {
+  background: var(--ods-color-brand);
+  color: var(--ods-color-on-emphasis);
+}
+
+.ods-tab--active:hover {
+  background: var(--ods-color-brand-strong);
+}
+
+.ods-tab__lock {
+  font-size: 0.75em;
+  opacity: 0.7;
+}
+
+/* ── Tile (big tap target, accent-colored) ─────────────────────────────── */
+
+.ods-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 80px;
+  border-radius: 14px;
+  border: 2.5px solid var(--ods-color-border-strong);
+  background: var(--ods-color-surface-alt);
+  color: var(--ods-color-text-secondary);
+  font-family: var(--ods-font-sans);
+  font-size: 22px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: filter 0.15s;
+  touch-action: manipulation;
+}
+
+.ods-tile:hover {
+  filter: brightness(0.97);
+}
+
+.ods-tile--violet {
+  background: var(--ods-color-accent-violet-soft);
+  border-color: var(--ods-color-accent-violet-border);
+  color: var(--ods-color-accent-violet);
+}
+
+.ods-tile--cyan {
+  background: var(--ods-color-accent-cyan-soft);
+  border-color: var(--ods-color-accent-cyan-border);
+  color: var(--ods-color-accent-cyan);
+}
+
+.ods-tile--orange {
+  background: var(--ods-color-accent-orange-soft);
+  border-color: var(--ods-color-accent-orange-border);
+  color: var(--ods-color-accent-orange);
+}

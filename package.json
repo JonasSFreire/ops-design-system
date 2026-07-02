@@ -1,0 +1,9 @@
+{
+  "name": "ops-design-system",
+  "version": "0.1.0",
+  "description": "Bare-bones, tokens-first design system for internal (vibecoded) apps — one CSS import, shared identity.",
+  "style": "index.css",
+  "main": "index.css",
+  "files": ["index.css", "tokens.css", "components.css", "README.md"],
+  "license": "UNLICENSED"
+}
